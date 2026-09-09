@@ -1,4 +1,4 @@
-$primary-color: #03FF99;
+$primary-color: #03ff99;
 $primary-text-color: #f5f5f5;
 $secondary-text-color: #dedede;
 $download-text-color: #ffffff;
@@ -11,530 +11,534 @@ $outinfo-label-color: #cccccc;
 $outinfo-text-color: #ffffff;
 
 @keyframes shadowRiseUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes downloadBounce {
-    0%, 100% {
-        transform: scale(1.1) translateY(0);
-    }
-    50% {
-        transform: scale(1.1) translateY(-2px);
-    }
+  0%,
+  100% {
+    transform: scale(1.1) translateY(0);
+  }
+  50% {
+    transform: scale(1.1) translateY(-2px);
+  }
 }
 
 @keyframes downloadClick {
-    0% {
-        transform: translateY(-3px) scale(1);
-    }
-    50% {
-        transform: translateY(-1px) scale(0.95);
-    }
-    100% {
-        transform: translateY(-3px) scale(1);
-    }
+  0% {
+    transform: translateY(-3px) scale(1);
+  }
+  50% {
+    transform: translateY(-1px) scale(0.95);
+  }
+  100% {
+    transform: translateY(-3px) scale(1);
+  }
 }
 
 @keyframes downloadSuccess {
-    0% {
-        transform: scale(1.1);
-        color: rgba($download-text-color, 0.9);
-    }
-    25% {
-        transform: scale(1.3);
-        color: $primary-color;
-    }
-    50% {
-        transform: scale(1.1);
-        color: $primary-color;
-    }
-    100% {
-        transform: scale(1.1);
-        color: $primary-color;
-    }
+  0% {
+    transform: scale(1.1);
+    color: rgba($download-text-color, 0.9);
+  }
+  25% {
+    transform: scale(1.3);
+    color: $primary-color;
+  }
+  50% {
+    transform: scale(1.1);
+    color: $primary-color;
+  }
+  100% {
+    transform: scale(1.1);
+    color: $primary-color;
+  }
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px 0 0 0;
 }
 
 .backButton {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: $primary-color;
-    border: 2px solid $primary-color;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 24px;
-    
-    &:hover {
-        background-color: $primary-color;
-        color: #000;
-        transform: scale(1.1);
-    }
-    
-    &:focus {
-        outline: none;
-        box-shadow: 0 0 0 3px rgba($primary-color, 0.3);
-    }
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: $primary-color;
+  border: 2px solid $primary-color;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 24px;
+
+  &:hover {
+    background-color: $primary-color;
+    color: #000;
+    transform: scale(1.1);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.3);
+  }
 }
 
 .detailContent {
-    max-width: 1000px;
+  max-width: 1000px;
+  width: 100%;
+  margin-top: 60px;
+
+  .heroSection {
+    position: relative;
     width: 100%;
-    margin-top: 60px;
-    
-    .heroSection {
-        position: relative;
-        width: 100%;
-        height: 400px;
-        border-radius: 20px;
-        overflow: hidden;
-        margin-bottom: 30px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        
-        .heroImage {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        
-        &:hover .heroImage {
-            transform: scale(1.05);
-        }
-        
-        .heroOverlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                135deg,
-                rgba(0, 0, 0, 0.3) 0%,
-                rgba(0, 0, 0, 0.6) 100%
-            );
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 40px;
-            
-            .heroTitle {
-                font-size: 3rem;
-                color: $primary-text-color;
-                margin-bottom: 10px;
-                text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-                font-weight: bold;
-                line-height: 1.2;
-            }
-            
-            .heroSubtitle {
-                font-size: 1.2rem;
-                color: $secondary-text-color;
-                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-                line-height: 1.4;
-            }
-        }
-        
-        .downloadButton {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            z-index: 10;
-            color: #ffffff;
-            background: rgba($color: #939393, $alpha: 0.5);
-            border: 2px solid rgba(255, 255, 255, 0.8);
-            border-radius: 16px;
-            width: 80px;
-            height: 80px;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 4px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow: hidden;
-            backdrop-filter: blur(20px);
-            
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: linear-gradient(145deg, transparent, rgba($primary-color, 0.1));
-                opacity: 0;
-                transition: opacity 0.3s ease;
-                border-radius: 15px;
-            }
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 
-            &:hover {
-                color: #03FF99;
-                transform: translateY(-3px);
-                border-color: rgba($primary-color, 1);
-                box-shadow: 
-                    0 8px 32px rgba($primary-color, 0.15),
-                    0 4px 16px rgba(0, 0, 0, 0.1),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-
-                .downloadIcon {
-                    color: $primary-color;
-                    transform: scale(1.1);
-                }
-                
-                .downloadText {
-                    color: $primary-color;
-                }
-            }
-
-            &.clicked {
-                animation: downloadClick 0.4s ease-out;
-
-                .downloadIcon {
-                    animation: downloadSuccess 0.6s ease-out;
-                }
-            }
-
-            .downloadIcon {
-                width: 32px;
-                height: 32px;
-                color: rgba($download-text-color, 0.9);
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                z-index: 1;
-            }
-            
-            .downloadText {
-                font-size: 10px;
-                font-weight: 500;
-                color: rgba($download-text-color, 0.9);
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            }
-        }
+    .heroImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
     }
-    
-    .contentSection {
-        background-color: $div-background-color;
+
+    &:hover .heroImage {
+      transform: scale(1.05);
+    }
+
+    .heroOverlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px;
+
+      .heroTitle {
+        font-size: 3rem;
+        color: $primary-text-color;
+        margin-bottom: 10px;
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+        font-weight: bold;
+        line-height: 1.2;
+      }
+
+      .heroSubtitle {
+        font-size: 1.2rem;
+        color: $secondary-text-color;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        line-height: 1.4;
+      }
+    }
+
+    .downloadButton {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      z-index: 10;
+      color: #ffffff;
+      background: rgba($color: #939393, $alpha: 0.5);
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      border-radius: 16px;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+      backdrop-filter: blur(20px);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          145deg,
+          transparent,
+          rgba($primary-color, 0.1)
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
         border-radius: 15px;
-        padding: 30px;
-        margin-bottom: 20px;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        
-        .sectionTitle {
-            font-size: 1.8rem;
-            color: $primary-color;
-            margin-bottom: 20px;
-            border-bottom: 2px solid $primary-color;
-            padding-bottom: 10px;
-            font-weight: 600;
-        }
-        
-        .description {
-            font-size: 1.1rem;
-            color: $primary-text-color;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-        
-        .videoContainer {
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
+      }
+
+      &:hover {
+        color: #03ff99;
+        transform: translateY(-3px);
+        border-color: rgba($primary-color, 1);
+        box-shadow:
+          0 8px 32px rgba($primary-color, 0.15),
+          0 4px 16px rgba(0, 0, 0, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+        .downloadIcon {
+          color: $primary-color;
+          transform: scale(1.1);
         }
 
-        .videoWrapper {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
+        .downloadText {
+          color: $primary-color;
+        }
+      }
+
+      &.clicked {
+        animation: downloadClick 0.4s ease-out;
+
+        .downloadIcon {
+          animation: downloadSuccess 0.6s ease-out;
+        }
+      }
+
+      .downloadIcon {
+        width: 32px;
+        height: 32px;
+        color: rgba($download-text-color, 0.9);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1;
+      }
+
+      .downloadText {
+        font-size: 10px;
+        font-weight: 500;
+        color: rgba($download-text-color, 0.9);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+  }
+
+  .contentSection {
+    background-color: $div-background-color;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    .sectionTitle {
+      font-size: 1.8rem;
+      color: $primary-color;
+      margin-bottom: 20px;
+      border-bottom: 2px solid $primary-color;
+      padding-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      color: $primary-text-color;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .videoContainer {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .videoWrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .youtubeIframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      border: none;
+    }
+  }
+
+  .infoSection {
+    background-color: $div-background-color;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    .sectionTitle {
+      font-size: 1.8rem;
+      color: $primary-color;
+      margin-bottom: 20px;
+      border-bottom: 2px solid $primary-color;
+      padding-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .infoGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+
+      .infoItem {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .infoLabel {
+          font-size: 14px;
+          color: $outinfo-label-color;
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
         }
 
-        .youtubeIframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 12px;
-            border: none;
+        .infoValue {
+          font-size: 16px;
+          color: $primary-text-color;
+          font-weight: 600;
+          line-height: 1.4;
         }
+
+        .versionSelect {
+          padding: 10px 14px;
+          font-size: 14px;
+          border-radius: 8px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          background: $outinfo-tag-bg;
+          color: $primary-text-color;
+          backdrop-filter: blur(4px);
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+          &:hover {
+            border-color: $primary-color;
+            background: rgba(255, 255, 255, 0.2);
+          }
+
+          &:focus {
+            outline: none;
+            border-color: $primary-color;
+            box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+          }
+        }
+
+        .tag {
+          padding: 8px 16px;
+          font-size: 14px;
+          border-radius: 20px;
+          background: $outinfo-tag-bg;
+          color: $primary-text-color;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          backdrop-filter: blur(4px);
+          display: inline-block;
+          width: fit-content;
+          transition: all 0.2s ease;
+          font-weight: 500;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
     }
-    
-    
-    .infoSection {
-        background-color: $div-background-color;
-        border-radius: 15px;
-        padding: 30px;
-        margin-bottom: 20px;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        
-        .sectionTitle {
-            font-size: 1.8rem;
-            color: $primary-color;
-            margin-bottom: 20px;
-            border-bottom: 2px solid $primary-color;
-            padding-bottom: 10px;
-            font-weight: 600;
-        }
-        
-        .infoGrid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            
-            .infoItem {
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-                
-                .infoLabel {
-                    font-size: 14px;
-                    color: $outinfo-label-color;
-                    font-weight: 500;
-                    text-transform: uppercase;
-                    letter-spacing: 0.5px;
-                }
-                
-                .infoValue {
-                    font-size: 16px;
-                    color: $primary-text-color;
-                    font-weight: 600;
-                    line-height: 1.4;
-                }
-                
-                .versionSelect {
-                    padding: 10px 14px;
-                    font-size: 14px;
-                    border-radius: 8px;
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    background: $outinfo-tag-bg;
-                    color: $primary-text-color;
-                    backdrop-filter: blur(4px);
-                    cursor: pointer;
-                    transition: all 0.2s ease;
-                    
-                    &:hover {
-                        border-color: $primary-color;
-                        background: rgba(255, 255, 255, 0.2);
-                    }
-                    
-                    &:focus {
-                        outline: none;
-                        border-color: $primary-color;
-                        box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
-                    }
-                }
-                
-                .tag {
-                    padding: 8px 16px;
-                    font-size: 14px;
-                    border-radius: 20px;
-                    background: $outinfo-tag-bg;
-                    color: $primary-text-color;
-                    border: 1px solid rgba(255, 255, 255, 0.08);
-                    backdrop-filter: blur(4px);
-                    display: inline-block;
-                    width: fit-content;
-                    transition: all 0.2s ease;
-                    font-weight: 500;
-                    
-                    &:hover {
-                        background: rgba(255, 255, 255, 0.2);
-                        transform: translateY(-1px);
-                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-                    }
-                }
-            }
-        }
-    }
+  }
 }
 
 @media (max-width: 768px) {
-    .container {
-        padding: 10px 0 0 0;
+  .container {
+    padding: 10px 0 0 0;
+  }
+
+  .backButton {
+    top: 15px;
+    left: 15px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .detailContent {
+    padding: 0 15px;
+    margin-top: 50px;
+
+    .heroSection {
+      height: 280px;
+      border-radius: 15px;
+
+      .heroOverlay {
+        padding: 25px;
+
+        .heroTitle {
+          font-size: 2.2rem;
+        }
+
+        .heroSubtitle {
+          font-size: 1.1rem;
+        }
+      }
+
+      .downloadButton {
+        bottom: 15px;
+        right: 15px;
+        width: 70px;
+        height: 70px;
+        border-radius: 14px;
+
+        .downloadIcon {
+          width: 28px;
+          height: 28px;
+        }
+
+        .downloadText {
+          font-size: 9px;
+        }
+      }
     }
-    
-    .backButton {
-        top: 15px;
-        left: 15px;
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
+
+    .actionSection {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+
+      .youtubeButton {
+        width: 100%;
+        max-width: 300px;
+        padding: 14px 20px;
+      }
     }
-    
-    .detailContent {
-        padding: 0 15px;
-        margin-top: 50px;
-        
-        .heroSection {
-            height: 280px;
-            border-radius: 15px;
-            
-            .heroOverlay {
-                padding: 25px;
-                
-                .heroTitle {
-                    font-size: 2.2rem;
-                }
-                
-                .heroSubtitle {
-                    font-size: 1.1rem;
-                }
-            }
-            
-            .downloadButton {
-                bottom: 15px;
-                right: 15px;
-                width: 70px;
-                height: 70px;
-                border-radius: 14px;
-                
-                .downloadIcon {
-                    width: 28px;
-                    height: 28px;
-                }
-                
-                .downloadText {
-                    font-size: 9px;
-                }
-            }
-        }
-        
-        .actionSection {
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            
-            .youtubeButton {
-                width: 100%;
-                max-width: 300px;
-                padding: 14px 20px;
-            }
-        }
-        
-        .contentSection,
-        .infoSection {
-            padding: 25px;
-            border-radius: 12px;
-            
-            .sectionTitle {
-                font-size: 1.6rem;
-                margin-bottom: 15px;
-            }
-            
-            .description {
-                font-size: 1rem;
-                line-height: 1.6;
-            }
-            
-            .videoContainer {
-                max-width: 100%;
-            }
-        }
-        
-        .infoSection .infoGrid {
-            grid-template-columns: 1fr;
-            gap: 15px;
-            
-            .infoItem {
-                .infoLabel {
-                    font-size: 12px;
-                }
-                
-                .infoValue {
-                    font-size: 15px;
-                }
-                
-                .versionSelect {
-                    font-size: 13px;
-                    padding: 8px 12px;
-                }
-                
-                .tag {
-                    font-size: 13px;
-                    padding: 6px 14px;
-                }
-            }
-        }
+
+    .contentSection,
+    .infoSection {
+      padding: 25px;
+      border-radius: 12px;
+
+      .sectionTitle {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+      }
+
+      .description {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .videoContainer {
+        max-width: 100%;
+      }
     }
+
+    .infoSection .infoGrid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+
+      .infoItem {
+        .infoLabel {
+          font-size: 12px;
+        }
+
+        .infoValue {
+          font-size: 15px;
+        }
+
+        .versionSelect {
+          font-size: 13px;
+          padding: 8px 12px;
+        }
+
+        .tag {
+          font-size: 13px;
+          padding: 6px 14px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 480px) {
-    .detailContent {
-        .heroSection {
-            height: 220px;
-            
-            .heroOverlay {
-                padding: 20px;
-                
-                .heroTitle {
-                    font-size: 1.8rem;
-                }
-                
-                .heroSubtitle {
-                    font-size: 1rem;
-                }
-            }
-            
-            .downloadButton {
-                bottom: 12px;
-                right: 12px;
-                width: 60px;
-                height: 60px;
-                
-                .downloadIcon {
-                    width: 24px;
-                    height: 24px;
-                }
-                
-                .downloadText {
-                    font-size: 8px;
-                }
-            }
+  .detailContent {
+    .heroSection {
+      height: 220px;
+
+      .heroOverlay {
+        padding: 20px;
+
+        .heroTitle {
+          font-size: 1.8rem;
         }
-        
-        .contentSection,
-        .infoSection {
-            padding: 20px;
-            margin-bottom: 15px;
-            
-            .sectionTitle {
-                font-size: 1.4rem;
-            }
+
+        .heroSubtitle {
+          font-size: 1rem;
         }
+      }
+
+      .downloadButton {
+        bottom: 12px;
+        right: 12px;
+        width: 60px;
+        height: 60px;
+
+        .downloadIcon {
+          width: 24px;
+          height: 24px;
+        }
+
+        .downloadText {
+          font-size: 8px;
+        }
+      }
     }
+
+    .contentSection,
+    .infoSection {
+      padding: 20px;
+      margin-bottom: 15px;
+
+      .sectionTitle {
+        font-size: 1.4rem;
+      }
+    }
+  }
 }

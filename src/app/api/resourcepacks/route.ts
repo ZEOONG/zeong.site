@@ -1,7 +1,8 @@
-import { CardDataSchema } from "@/types/card";
-import { z } from "zod";
 import { promises as fs } from "fs";
 import path from "path";
+import { z } from "zod";
+
+import { CardDataSchema } from "@/types/card";
 
 export async function GET() {
   try {
@@ -16,7 +17,7 @@ export async function GET() {
     console.error(error);
     return Response.json(
       { error: "리소스팩 데이터 형식이 올바르지 않습니다." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
