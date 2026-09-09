@@ -1,0 +1,77 @@
+[
+    {
+      "id": "soullike",
+      "titleImage": "https://imagedelivery.net/djfWIfaU9Mg_fliCGQwJbw/ca5decb3-c4e0-433a-9046-16e35b1bc000/public",
+      "overlay": {
+        "title": "소울라이크 게임팩",
+        "subtitle": "마인크래프트로 구현한 소울라이크"
+      },
+      "content": {
+        "title": "소울라이크",
+        "description": "소울게임 스타일 전투를 마크로 구현했습니다",
+        "detailedDescription": "다크 소울 시리즈에서 영감을 받은 고난도 전투 시스템을 마인크래프트로 구현했습니다. 정확한 타이밍의 회피, 스태미나 관리, 그리고 패턴 학습이 핵심인 보스전을 경험해보세요. 여러 종류의 보스와 독특한 전투 메커닉이 기다리고 있습니다."
+      },
+      "links": [
+        { "href": "https://www.youtube.com/watch?v=XhkNW_Zs5UM&t=7s", "icon": "/youtube-svgrepo-com.svg", "alt": "youtube" }
+      ],
+      "downloadUrl": "https://drive.google.com/uc?export=download&id=1zBlBEcg9CUyq1i9RDDGk8FYWA2eAj-2p",
+      "info": {
+        "versionOptions": ["1.21.1"],
+        "defaultVersion": "1.21.1",
+        "genre": "어드벤처",
+        "type": "모드, 맵, 리소스팩",
+        "downloads": 0,
+        "date": "2025-02-01"
+      }
+    },
+    {
+        "id": "kraken",
+        "titleImage": "https://imagedelivery.net/djfWIfaU9Mg_fliCGQwJbw/20f18bba-1fb4-4532-efa7-fa92956e4600/public",
+        "overlay": {
+          "title": "크라켄 게임팩",
+          "subtitle": "마인크래프트로 구현한 크라켄"
+        },
+        "content": {
+          "title": "크라켄",
+          "description": "난파당한 배 위에서 크라켄과 맞서 싸우는 맵입니다",
+          "detailedDescription": "폭풍우가 몰아치는 바다 한가운데, 난파당한 배 위에서 거대한 크라켄과의 생존 전투가 시작됩니다. 크라켄의 다양한 공격 패턴을 파악하고, 제한된 공간에서 전략적으로 싸워야 합니다. 바다의 파도와 번개가 더해져 긴장감 넘치는 전투를 경험할 수 있습니다."
+        },
+        "links": [
+          { "href": "https://www.youtube.com/watch?v=T-TEyPCI6RM&t=306s", "icon": "/youtube-svgrepo-com.svg", "alt": "youtube" }
+        ],
+        "downloadUrl": "https://drive.google.com/uc?export=download&id=1PgJ9bWEQ2fyqi5M58BzgL-SNnnKOGwXg",
+        "info": {
+          "versionOptions": ["1.21.4"],
+          "defaultVersion": "1.21.4",
+          "genre": "어드벤처",
+          "type": "모드, 맵, 리소스팩",
+          "downloads": 0,
+          "date": "2025-07-13"
+        }
+    },
+    {
+        "id": "jett",
+        "titleImage": "https://imagedelivery.net/djfWIfaU9Mg_fliCGQwJbw/13ef6fbd-d559-42a7-a3e3-db2f37dece00/public",
+        "overlay": {
+          "title": "제트 게임팩",
+          "subtitle": "마인크래프트로 구현한 제트"
+        },
+        "content": {
+          "title": "제트",
+          "description": "발로란트의 제트를 마크로 구현했습니다",
+          "detailedDescription": "발로란트의 인기 캐릭터 제트의 스킬들을 마인크래프트로 완벽하게 재현했습니다. 클라우드버스트로 시야를 차단하고, 업드래프트로 높이 뛰어오르며, 테일윈드로 빠르게 이동하세요. 궁극기 블레이드 스톰까지 구현되어 있어 진정한 제트 플레이를 경험할 수 있습니다."
+        },
+        "links": [
+          { "href": "https://www.youtube.com/watch?v=bjmnMyGqNPs", "icon": "/youtube-svgrepo-com.svg", "alt": "youtube" }
+        ],
+        "downloadUrl": "https://drive.google.com/uc?export=download&id=1uritcF6b2AvCLcV5DVvea25u5ACCXd0W",
+        "info": {
+          "versionOptions": ["1.21.4"],
+          "defaultVersion": "1.21.4",
+          "genre": "어드벤처",
+          "type": "모드, 맵, 리소스팩",
+          "downloads": 0,
+          "date": "2025-03-03"
+        }
+    }
+]

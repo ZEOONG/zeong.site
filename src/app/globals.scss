@@ -1,0 +1,40 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-image: url('https://imagedelivery.net/djfWIfaU9Mg_fliCGQwJbw/a7df2d90-8ad0-4f87-68f1-7f14e61ced00/public');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(14px);
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+}
+
+//강민재 : 스크롤바 숨기는걸로 했음
+body::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    font-family: "Pretendard" sans-serif;
+}

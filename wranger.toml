@@ -1,0 +1,3 @@
+name = "zeong"
+compatibillity_date = "2025-08-25"
+compatibillity_flags = ["nodejs_compat"]
