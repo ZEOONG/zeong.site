@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $primary-color: #03FF99;
 $primary-text-color: #f5f5f5;
 $secondary-text-color: #dedede;
@@ -245,7 +247,7 @@ $border-color: rgba(255, 255, 255, 0.1);
             gap: 8px;
             
             &:hover:not(:disabled) {
-                background-color: darken($primary-color, 10%);
+                background-color: color.adjust($primary-color, $lightness: -10%);
                 transform: translateY(-2px);
                 box-shadow: 0 4px 12px rgba($primary-color, 0.3);
             }
